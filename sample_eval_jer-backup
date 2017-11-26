@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+
+
+</head>
+
+
+
+
+<body onload="start()">
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+    </div>
+    <!--end of Navigation bar-->
+
+    <div class="wrapper" id="wrap">
+
+        <div class="sidebar-wrapper">
+
+            <div class="contact-container container-block">
+                <div class="jumbotron">
+                    <!-- <h2>
+                        <a href="https://deeplearnjs.org">DeeplearnJS</a> Practice</h2>
+                    <p style='font-size:1.2em'>This demo shows how to unsupervisely evaluate unsupervisely generated examples (end to end, no external
+                        model needed, no data labels needed).
+                    </p> -->
+                </div>
+                <p>Last Update: 2017-11-23</p>
+                <p>
+                    <a href="https://github.com/PAIR-code/deeplearnjs/blob/master/LICENSE">DeeplearnJS's Apache License</a>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="main-wrapper">
+
+            <div class="item row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input class="btn btn-primary btn-md" id="buttoninfer" type="submit" value="Start Inferring" />
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label for="environment-dropdown">Environment</label>
+                        <select class="form-control" id="environment-dropdown">
+                            <option value="CPU">CPU</option>
+                            <option value="GPU">GPU</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div class="item row">
+
+                <div class="col-md-6 col-sm-6 col-xs-12">
+
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input class="btn btn-primary btn-md" id="buttoneval1" type="submit" value="Start Evaluating" />
+                    <div class="train-stats-message" id="evalExamplesPerSec">Eval Examples/sec: </div>
+                    <div class="train-stats-message" id="examplesEvaluated">Examples evaluated:</div>
+                    <div class="train-stats-message" id="evalTotalTimeSec">Eval Total time: sec.</div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <hr class="divider" />
+
+
+            <div class="item row">
+
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <p>real images</p>
+                    <div id="real-container"></div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <p>a good generator</p>
+                    <div id="generated-container"></div>
+                </div>
+                <!-- <div id="generated_bad_container">a bad generator</div> -->
+
+            </div>
+
+            <br>
+            <br>
+            <hr class="divider" />
+
+            <div class="item row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+
+                    <canvas id="realimagelossgraph"></canvas>
+
+                </div>
+
+
+
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <!-- <canvas id="real_image_js_loss"></canvas> -->
+                    <!-- <canvas id="bad_gen_js_loss"></canvas> -->
+                    <canvas id="critlossgraph"></canvas>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- custom js -->
+    <script type="text/javascript" src="assets/js/nav.js"></script>
+
+    <script src="https://unpkg.com/deeplearn"></script>
+
+    <!-- detect browser support -->
+    <script src="deeplearnjs/support.js"></script>
+    <script src="deeplearnjs/utils.js"></script>
+    <script src="deeplearnjs/sample_eval/model_layer.js"></script>
+    <script src="deeplearnjs/sample_eval/eval.js"></script>
+    <script src="deeplearnjs/sample_eval/my_graph_runner.js"></script>
+    <script src="https://cs.stanford.edu/people/karpathy/convnetjs/build/vis.js"></script>
+    <script src="https://cs.stanford.edu/people/karpathy/convnetjs/build/util.js"></script>
+
+    <script type="text/javascript" src="deeplearnjs/sample_eval/sample_eval.js"></script>
+
+</body>
+
+</html>
