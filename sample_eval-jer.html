@@ -2,20 +2,14 @@
 <html lang="en">
 
 <head>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
 
-
 </head>
-
-
-
 
 <body onload="start()">
 
 
-
-<input class="btn btn-primary btn-md" id="buttoninfer" type="submit" value="Start Inferring" />
+<input class="btn btn-primary btn-md" id="buttoninfer" type="submit" value="Start Inferring" /><br>
 
 <label for="environment-dropdown">Environment</label>
 <select class="form-control" id="environment-dropdown">
@@ -37,45 +31,24 @@
 
 
 
-            <div class="item row">
 
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <p>real images</p>
-                    <div id="real-container"></div>
-                </div>
+<p>real images</p>
+<div id="real-container"></div>
 
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <p>a good generator</p>
-                    <div id="generated-container"></div>
-                </div>
-                <!-- <div id="generated_bad_container">a bad generator</div> -->
+<p>a good generator</p>
+<div id="generated-container"></div>
 
-            </div>
 
-            <br>
-            <br>
-            <hr class="divider" />
+<canvas id="realimagelossgraph"></canvas>
 
-            <div class="item row">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-
-                    <canvas id="realimagelossgraph"></canvas>
-
-                </div>
+          
 
 
 
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <!-- <canvas id="real_image_js_loss"></canvas> -->
-                    <!-- <canvas id="bad_gen_js_loss"></canvas> -->
-                    <canvas id="critlossgraph"></canvas>
-                </div>
+<!-- <canvas id="real_image_js_loss"></canvas> -->
+<!-- <canvas id="bad_gen_js_loss"></canvas> -->
+<canvas id="critlossgraph"></canvas>
 
-            </div>
-
-        </div>
-
-    </div>
 
 
     <!-- Javascript -->
